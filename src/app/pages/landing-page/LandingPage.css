@@ -1,0 +1,42 @@
+#page-landing {
+    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#page-landing .container-wrapper {
+    max-height: 70rem;
+    max-width: 115rem;
+}
+
+#page-landing .container-wrapper main {
+    max-width: 36rem;
+}
+
+#page-landing .container-wrapper main h1 {
+    line-height: 7.2rem;
+    font-size: 8.2rem;
+}
+
+#page-landing .enter-app {
+    transition: background-color 0.2s;
+    border-radius: 30px;
+    height: 80px;
+    width: 80px;
+}
+
+#page-landing .enter-app:hover {
+    background-color: #96feff;
+}
+
+@media only screen and (max-width: calc(70rem + 3rem)), (max-height: calc(44rem + 3rem)) {
+    #page-landing {
+        padding: var(--padding-xg);
+    }
+}
+
+@media only screen and (max-width: 64rem) {
+    #page-landing .landing-image {
+        display: none;
+    }
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+@import './animations.css';
+@import './paddings.css';
+@import './margins.css';
+@import './colors.css';
+@import './flexs.css';
+@import './fonts.css';
+:root {
+    /*
+        Font default 16px
+        16 * 0.6 = 9.6px
+
+        1rem = 9.6px
+    */
+    font-size: 60%;
+    /* *** */
+    --size-none: 0rem;
+    --size-xxs: 0.1rem;
+    --size-xs: 0.5rem;
+    --size-s: 1rem;
+    --size-sm: 1.4rem;
+    --size-m: 1.8rem;
+    --size-g: 2.2rem;
+    --size-xg: 3rem;
+    --size-fill: 100%;
+    /* *** */
+    --color-background: #ebf2f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    -ms-user-select: none;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    font-family: var(--font-family-default);
+}
+
+html, body, #root {
+    background-color: var(--color-background);
+    color: var(--text-color);
+    height: 100vh;
+    width: 100vw;
+}
+
+body, input, button, textarea {
+    font: var(--font-weight-m) var(--font-size-g) var(--font-family-default);
+}
+
+div, nav {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    background-color: transparent;
+}
+
+.full-width {
+    width: var(--size-fill);
+}
+
+.full-height {
+    height: var(--size-fill);
+}

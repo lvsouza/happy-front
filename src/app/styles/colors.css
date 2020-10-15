@@ -1,0 +1,35 @@
+/* =============================== *
+ * Colors                          *
+ * =============================== */
+
+:root {
+    --color-primary: #3CDC8C;
+    --color-yellow: #ffd666;
+    --color-blue: #15C3D6;
+    --background: #ebf2f5;
+    --color-white: #fff;
+}
+
+.background {
+    background-color: var(--background);
+}
+
+.color-blue {
+    background-color: var(--color-blue);
+}
+
+.color-yellow {
+    background-color: var(--color-yellow);
+}
+
+.background-primary {
+    background-color: var(--color-primary);
+}
+
+.background-transparent {
+    background-color: transparent;
+}
+
+.text-white {
+    color: var(--color-white);
+}
