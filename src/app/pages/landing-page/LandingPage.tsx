@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import { Assets } from '../../assets';
 import './LandingPage.css';
@@ -27,9 +28,9 @@ export const LandingPage: React.FC = () => {
             <span className="font-size-xg">Campo Bom</span>
           </div>
 
-          <a href="" className="enter-app color-yellow display-flex flex-content-center flex-items-center">
+          <Link to="/app" className="enter-app color-yellow display-flex flex-content-center flex-items-center">
             <FiArrowRight size={'2.5rem'} color="rgba(0, 0, 0, 0.6)" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
