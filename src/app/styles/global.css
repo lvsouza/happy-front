@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
 @import './animations.css';
+@import './z-indexes.css';
 @import './paddings.css';
 @import './margins.css';
 @import './colors.css';
@@ -63,4 +64,8 @@ div, nav {
 
 .full-height {
     height: var(--size-fill);
+}
+
+.position-relative {
+    position: relative;
 }

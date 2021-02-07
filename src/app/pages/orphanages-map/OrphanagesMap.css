@@ -1,0 +1,30 @@
+.page-map aside {
+    width: 440px;
+    padding: 8rem;
+    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+}
+
+.page-map aside p {
+    margin-top: 24px;
+    line-height: 28px;
+}
+
+.page-map aside h2 {
+    font-size: 40px;
+    margin-top: 62px;
+    line-height: 42px;
+}
+
+.create-orphanage {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.create-orphanage:hover {
+    background-color: #17d6eb;
+}

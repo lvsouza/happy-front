@@ -10,4 +10,9 @@
 
 ---
 
+Progresso do desenvolvimento:
 
+- [ ] Dia 1
+- [ ] Dia 2
+- [ ] Dia 3
+- [ ] Dia 4
