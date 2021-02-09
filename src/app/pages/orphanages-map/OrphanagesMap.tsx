@@ -1,8 +1,9 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { FiPlus } from 'react-icons/fi';
+import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
+import leaflet from 'leaflet';
 
 import { Assets } from '../../assets';
 import './OrphanagesMap.css';
@@ -30,15 +31,31 @@ export const OrphanagesMapPage: React.FC = () => {
                 className="full-height full-width z1"
             >
                 <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <Marker position={[51.505, -0.09]}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
+                <Marker
+                    position={[51.505, -0.09]}
+                    icon={leaflet.icon({
+                        iconSize: [58, 68],
+                        iconAnchor: [29, 68],
+                        popupAnchor: [170, 2],
+                        iconUrl: Assets.mapMarker,
+                    })}
+                >
+                    <Popup
+                        minWidth={240}
+                        maxWidth={240}
+                        closeButton={false}
+                        className="map-popup"
+                    >
+                        Lar de teste
+                        <Link to="/orphanages/1">
+                            <FiArrowRight size={'2.5rem'} color="var(--text-color)" />
+                        </Link>
                     </Popup>
                 </Marker>
             </MapContainer>
 
-            <Link to="/app" className="create-orphanage color-blue display-flex flex-content-center flex-items-center z2">
-                <FiPlus size={'2.5rem'} color="rgba(0, 0, 0, 0.6)" />
+            <Link to="/orphanages/create" className="create-orphanage color-blue display-flex flex-content-center flex-items-center z2">
+                <FiPlus size={'2.5rem'} color="var(--text-color)" />
             </Link>
         </div>
     );

@@ -28,3 +28,36 @@
 .create-orphanage:hover {
     background-color: #17d6eb;
 }
+
+.map-popup .leaflet-popup-content-wrapper {
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.map-popup .leaflet-popup-content {
+    color: #0089a5;
+    font-size: var(--font-size-g);
+    font-weight: var(--font-weight-xg);
+    margin: var(--size-s) var(--size-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-popup .leaflet-popup-content a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: #15c3d6;
+}
+
+.map-popup .leaflet-popup-content a:hover {
+    background-color: #17d6eb;
+}
+
+.map-popup .leaflet-popup-tip-container {
+    display: none;
+}

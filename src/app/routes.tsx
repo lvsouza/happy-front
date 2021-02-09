@@ -8,7 +8,7 @@ export const Routes: React.FC = () => {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={LandingPage} />
-                <Route path="/app" component={OrphanagesMapPage} />
+                <Route path="/orphanages/map" component={OrphanagesMapPage} />
             </Switch>
         </BrowserRouter>
     );

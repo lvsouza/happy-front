@@ -28,7 +28,7 @@ export const LandingPage: React.FC = () => {
             <span className="font-size-xg">Campo Bom</span>
           </div>
 
-          <Link to="/app" className="enter-app color-yellow display-flex flex-content-center flex-items-center">
+          <Link to="/orphanages/map" className="enter-app color-yellow display-flex flex-content-center flex-items-center">
             <FiArrowRight size={'2.5rem'} color="rgba(0, 0, 0, 0.6)" />
           </Link>
         </div>
