@@ -1,35 +1,25 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiClock, FiInfo, FiArrowLeft } from "react-icons/fi";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import { useHistory } from 'react-router-dom';
-import L from 'leaflet';
+import { FiClock, FiInfo } from "react-icons/fi";
+import leaflet from 'leaflet';
 
+import { Sidebar } from "../../components";
 import { Assets } from "../../assets";
 import './Orphanage.css';
 
-const happyMapIcon = L.icon({
-  iconUrl: Assets.mapMarker,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60]
-})
-
 export const Orphanage: React.FC = () => {
-  const { goBack } = useHistory();
+
+  const happyMapIcon = useMemo(() => leaflet.icon({
+    iconUrl: Assets.mapMarker,
+    popupAnchor: [0, -60],
+    iconAnchor: [29, 68],
+    iconSize: [58, 68],
+  }), []);
 
   return (
     <div id="page-orphanage" className="flex1">
-      <aside>
-        <img src={Assets.mapMarker} alt="Happy" />
-
-        <footer>
-          <button type="button" onClick={goBack}>
-            <FiArrowLeft size={24} color="#FFF" />
-          </button>
-        </footer>
-      </aside>
+      <Sidebar />
 
       <main className="flex1">
         <div className="orphanage-details flex-column">

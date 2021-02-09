@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,14 @@ import { Assets } from '../../assets';
 import './OrphanagesMap.css';
 
 export const OrphanagesMapPage: React.FC = () => {
+
+    const happyMapIcon = useMemo(() => leaflet.icon({
+        iconUrl: Assets.mapMarker,
+        popupAnchor: [170, 2],
+        iconAnchor: [29, 68],
+        iconSize: [58, 68],
+    }), []);
+
     return (
         <div className="page-map full-width full-height position-relative">
             <aside className="display-flex flex-column flex-space-between">
@@ -32,13 +40,8 @@ export const OrphanagesMapPage: React.FC = () => {
             >
                 <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker
+                    icon={happyMapIcon}
                     position={[51.505, -0.09]}
-                    icon={leaflet.icon({
-                        iconSize: [58, 68],
-                        iconAnchor: [29, 68],
-                        popupAnchor: [170, 2],
-                        iconUrl: Assets.mapMarker,
-                    })}
                 >
                     <Popup
                         minWidth={240}
