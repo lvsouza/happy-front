@@ -54,7 +54,7 @@ export const OrphanagesMapPage: React.FC = () => {
                 </Marker>
             </MapContainer>
 
-            <Link to="/orphanages/create" className="create-orphanage color-blue display-flex flex-content-center flex-items-center z2">
+            <Link to="/orphanages-create" className="create-orphanage color-blue display-flex flex-content-center flex-items-center z2">
                 <FiPlus size={'2.5rem'} color="var(--text-color)" />
             </Link>
         </div>

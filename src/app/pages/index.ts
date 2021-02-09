@@ -1,2 +1,4 @@
-export { OrphanagesMapPage } from './orphanages-map/OrphanagesMap';
-export { LandingPage } from './landing-page/LandingPage';
+export * from './create-orphanage/CreateOrphanage';
+export * from './orphanages-map/OrphanagesMap';
+export * from './orphanage-detail/Orphanage';
+export * from './landing-page/LandingPage';
