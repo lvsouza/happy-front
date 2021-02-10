@@ -38,7 +38,17 @@ const getOrphanagesById = async (id: number): Promise<IOrphanage | undefined> =>
     }
 };
 
+const createOrphanage = async (data: FormData): Promise<boolean> => {
+    try {
+        await Api.post<IOrphanage>(`/orphanages`, data);
+        return true;
+    } catch (e) {
+        return false;
+    }
+};
+
 export const OrphanagesService = {
     getAllOrphanages,
     getOrphanagesById,
+    createOrphanage,
 }
